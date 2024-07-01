@@ -3,34 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Static Website</title>
+    <title>Yipee Web</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Static Website</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-    <main>
-        <section id="home">
-            <h2>Home</h2>
-            <p>This is the home section of the website.</p>
-        </section>
-        <section id="about">
-            <h2>About</h2>
-            <p>This is the about section of the website.</p>
-        </section>
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>This is the contact section of the website.</p>
-        </section>
-    </main>
+    <div class="bubble-container"></div>
+    <div class="wrapper">
+        <header>
+            <h1>Yipee</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#home">Body</a></li>
+                <li><a href="#about">Colour</a></li>
+                <li><a href="#contact">Intelligence</a></li>
+                <li><a href="#game">Game</a></li>
+            </ul>
+        </nav>
+        <main>
+            <img src="octpus.png" alt="cute cephalopods" class="image">
+            <h2>Octopus, Squid, and Cuttlefish</h2>
+            <p>Yummy. These are Cephalopods, of the mollusk family, and they are very peculiar creatures, as proven by their highly intelligent mannerisms and behavior.</p>
+            <section id="home">
+                <h2>Body</h2>
+                <p>This is the home section of the website.</p>
+            </section>
+            <section id="about">
+                <h2>Colour</h2>
+                <p>This is the about section of the website.</p>
+            </section>
+            <section id="contact">
+                <h2>Intelligence</h2>
+                <p>This is the contact section of the website.</p>
+            </section>
+            <section id="game">
+                <h2>Catch the Bubble Game</h2>
+                <div id="game-container"></div>
+                <p>Score: <span id="score">0</span></p>
+            </section>
+        </main>
+    </div>
     <footer>
         <p>&copy; 2024 My Static Website</p>
     </footer>
