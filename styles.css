@@ -1,21 +1,100 @@
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: "Tiny5", sans-serif;
+    line-height: 1.6;
+    background-color: #7bc8dbe0; 
+}
+
+.wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.bubble-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure the bubbles are in the background */
+    overflow: hidden;
+}
+
+.bubble {
+    position: absolute;
+    bottom: -100px; /* Start position below the screen */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for 3D effect */
+    opacity: 0.6;
+    animation: bubble 20s infinite;
+    cursor: pointer; /* Makes the bubble clickable */
+}
+
+@keyframes bubble {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) scale(1.5);
+        opacity: 0;
+    }
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+.pop {
+    animation: pop 0.3s forwards; /* Apply pop animation on click */
+}
+
+.splash {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    animation: splash 0.6s forwards;
+}
+
+@keyframes splash {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(3);
+        opacity: 0;
+    }
 }
 
 header {
-    background: #333;
-    color: #fff;
+    background: #c6fcf8; 
+    color: #353429;
     padding: 1rem 0;
     text-align: center;
 }
 
 nav ul {
-    background: #444;
-    color: #fff;
+    background: #03085096; 
+    color: #ffcdcd;
     display: flex;
     justify-content: center;
     list-style: none;
@@ -28,24 +107,42 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #000000;
     text-decoration: none;
 }
 
 main {
     padding: 1rem;
+    flex: 1;
 }
 
 section {
+    background-color: #7bc8db; 
     margin: 2rem 0;
+    padding: 1rem;
+    border-radius: 8px;
 }
 
 footer {
-    background: #333;
+    background: #ffe6937c; 
     color: #fff;
     text-align: center;
     padding: 1rem 0;
-    position: fixed;
-    bottom: 0;
+}
+
+.image {
+    border: 4px solid #9e3b20; 
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.9);
+    margin: 20px 0;
+}
+
+#game-container {
+    position: relative;
     width: 100%;
+    height: 300px;
+    background-color: #d4f0f9;
+    overflow: hidden;
+    border: 2px solid #000;
+    margin-top: 1rem;
+    border-radius: 8px;
 }
